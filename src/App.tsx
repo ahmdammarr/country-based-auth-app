@@ -1,13 +1,24 @@
 import React from 'react';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 import {
   Text,
   TextStyle,
   ViewStyle,
+  View,
   StatusBar,
   SafeAreaView,
   useColorScheme,
 } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+function HomeScreen() {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Home Screen</Text>
+    </View>
+  );
+}
 
 const App: React.FC = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -23,16 +34,19 @@ const App: React.FC = () => {
     color: isDarkMode ? Colors.lighter : Colors.darker,
   };
 
+
+ 
+  const Stack = createNativeStackNavigator();
+
+
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        backgroundColor={backgroundStyle.backgroundColor}
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-      />
-      <Text style={textStyle}>
-        Open up `src/App.tsx` to start working on your app!
-      </Text>
-    </SafeAreaView>
+
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+
   );
 };
 
