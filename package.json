@@ -49,6 +49,12 @@
     "react-test-renderer": "18.2.0",
     "typescript": "5.0.4"
   },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix --max-warnings 0 ."
+    ]
+  },
   "engines": {
     "node": ">=18"
   }
