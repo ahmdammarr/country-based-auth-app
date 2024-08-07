@@ -7,4 +7,8 @@ module.exports = {
   transformIgnorePatterns: [
     'node_modules/(?!(jest-)?react-native|@react-native|@react-native-community|@react-navigation)',
   ],
+  moduleNameMapper: {
+    '^react-native-localize$':
+      '<rootDir>/jest/__mocks__/react-native-localize.js',
+  },
 };
