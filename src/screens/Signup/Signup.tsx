@@ -10,7 +10,7 @@ import {ThemedTextInput} from '@/components/TextInput';
 import {ThemedButton} from '@/components/Button';
 import {useTranslation} from 'react-i18next';
 import {ApiError, Post} from '@/service/apiClient';
-import {SignupResponse} from '@/types/user.type';
+import {AuthResponse} from '@/types/user.type';
 
 import {setCredentials} from '@/config/secureStore';
 import {ENDPOINTS} from '@/service/enpoints';
@@ -48,7 +48,7 @@ export const Signup: FC = () => {
   const onSubmit = async (data: ISignupForm) => {
     setIsLoading(true);
     try {
-      const apiResponse = await Post<ISignupForm, SignupResponse>(
+      const apiResponse = await Post<ISignupForm, AuthResponse>(
         ENDPOINTS.SIGNUP,
         data,
       );

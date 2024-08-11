@@ -3,7 +3,7 @@ export interface User {
   email: string;
 }
 
-export interface SignupResponse {
+export interface AuthResponse {
   accessToken: string;
 }
 
