@@ -79,7 +79,7 @@ export const Signup: FC = () => {
           name="email"
           render={({field: {onChange, value}}) => (
             <ThemedTextInput
-              placeholder="Email"
+              placeholder={t('email')}
               value={value}
               onChangeText={onChange}
               keyboardType="email-address"
@@ -103,7 +103,7 @@ export const Signup: FC = () => {
           name="username"
           render={({field: {onChange, value}}) => (
             <ThemedTextInput
-              placeholder="Username"
+              placeholder={t('username')}
               value={value}
               onChangeText={onChange}
             />
@@ -125,7 +125,7 @@ export const Signup: FC = () => {
           name="password"
           render={({field: {onChange, value}}) => (
             <ThemedTextInput
-              placeholder="Password"
+              placeholder={t('password')}
               secureTextEntry
               value={value}
               onChangeText={onChange}

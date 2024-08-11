@@ -81,7 +81,7 @@ export const Login: FC = () => {
           name="email"
           render={({field: {onChange, value}}) => (
             <ThemedTextInput
-              placeholder="Email"
+              placeholder={t('email')}
               value={value}
               onChangeText={onChange}
               keyboardType="email-address"
@@ -105,7 +105,7 @@ export const Login: FC = () => {
           name="password"
           render={({field: {onChange, value}}) => (
             <ThemedTextInput
-              placeholder="Password"
+              placeholder={t('password')}
               secureTextEntry
               value={value}
               onChangeText={onChange}
