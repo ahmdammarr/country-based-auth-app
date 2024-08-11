@@ -42,3 +42,27 @@ jest.mock('react-native', () => {
   };
   return RN;
 });
+
+jest.mock('@react-native-async-storage/async-storage', () =>
+  require('@react-native-async-storage/async-storage/jest/async-storage-mock'),
+);
+
+jest.mock('@react-native-community/push-notification-ios', () => {
+  return {
+    addEventListener: jest.fn(),
+    requestPermissions: jest.fn().mockResolvedValue({
+      alert: true,
+      badge: true,
+      sound: true,
+    }),
+    getInitialNotification: jest.fn(() => Promise.resolve()),
+  };
+});
+
+jest.mock('react-native-push-notification', () => ({
+  configure: jest.fn(),
+  onRegister: jest.fn(),
+  onNotification: jest.fn(),
+  addEventListener: jest.fn(),
+  requestPermissions: jest.fn(),
+}));

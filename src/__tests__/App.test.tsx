@@ -10,5 +10,4 @@ import {render} from '@testing-library/react-native';
 
 test('basic test', () => {
   render(<App />);
-  // expect(screen.getByText('Home Screen')).toBeOnTheScreen();
 });
