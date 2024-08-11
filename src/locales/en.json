@@ -9,6 +9,7 @@
   "username_start_letter_min_6": "Username must start with a letter and be at least 6 characters long",
   "username_alphanumeric_min_6": "Username must be alphanumeric and at least 6 characters long",
   "username_alphanumeric_min_4": "Username must be alphanumeric and at least 4 characters long",
+  "username_is_required_field": "username is a required field",
   "signup": "Sign Up",
   "login": "Login",
   "SERVER_ERROR": "Something Went Wrong",

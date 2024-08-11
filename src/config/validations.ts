@@ -16,7 +16,7 @@ export const SignupValidationSchemas = {
     username: yup
       .string()
       .matches(/^[a-zA-Z0-9]{5,}$/, i18n.t('username_alphanumeric_min_5'))
-      .required(),
+      .required(i18n.t('username_is_required_field')),
   }),
   IN: yup.object().shape({
     email: emailSchema,
@@ -35,7 +35,7 @@ export const SignupValidationSchemas = {
     username: yup
       .string()
       .matches(/^[a-zA-Z0-9]{6,}$/, i18n.t('username_alphanumeric_min_6'))
-      .required(),
+      .required(i18n.t('username_is_required_field')),
   }),
   EG: yup.object().shape({
     email: emailSchema,
@@ -43,7 +43,7 @@ export const SignupValidationSchemas = {
     username: yup
       .string()
       .matches(/^[a-zA-Z0-9]{4,}$/, i18n.t('username_alphanumeric_min_4'))
-      .required(),
+      .required(i18n.t('username_is_required_field')),
   }),
 };
 
