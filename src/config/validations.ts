@@ -27,7 +27,7 @@ export const SignupValidationSchemas = {
         /^(?=[A-Za-z])(?=.*[A-Za-z])(?=.*\d)[A-Za-z0-9]{6,}$/,
         i18n.t('username_start_letter_min_6'),
       )
-      .required(),
+      .required(i18n.t('username_is_required_field')),
   }),
   US: yup.object().shape({
     email: emailSchema,
