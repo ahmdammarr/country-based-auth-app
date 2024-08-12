@@ -9,6 +9,7 @@ This the a mobile app for country based auth validation and themeing,
 3. Country based themeing
 4. IOS Local Push notification
 5. Api integration
+6. Secure storage
 
 
 ## How to Run this app ?
