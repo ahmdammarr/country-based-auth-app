@@ -14,7 +14,6 @@ export const Root = () => {
   const {isAuthonticated, isLoading: isAuthLoading} = useAuth();
 
   const isLoading = isCountryLoading || isAuthLoading;
-  console.log('isLoading', isAuthLoading);
 
   useEffect(() => {
     if (i18n.language.includes('ar')) {

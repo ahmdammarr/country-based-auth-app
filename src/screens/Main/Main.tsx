@@ -60,7 +60,6 @@ export const Main: FC = () => {
     const fetch = async () => {
       try {
         const user = await Get<UserDetails>(ENDPOINTS.GETUSER);
-        console.log('user', user?.data?.details);
 
         if (user.data?.details) {
           dispatch({type: 'SET_USER_DETAILS', payload: user?.data});
