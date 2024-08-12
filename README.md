@@ -57,3 +57,8 @@ yarn android
 yarn ios
 ```
 
+
+TODO:
+1. SSL Pinning
+2. Android locale push notifications
+3. Full test coverage
