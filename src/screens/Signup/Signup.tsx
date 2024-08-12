@@ -79,6 +79,7 @@ export const Signup: FC = () => {
           name="email"
           render={({field: {onChange, value}}) => (
             <ThemedTextInput
+              testID="email-input"
               placeholder={t('email')}
               value={value}
               onChangeText={onChange}
@@ -103,6 +104,7 @@ export const Signup: FC = () => {
           name="username"
           render={({field: {onChange, value}}) => (
             <ThemedTextInput
+              testID="username-input"
               placeholder={t('username')}
               value={value}
               onChangeText={onChange}
@@ -111,6 +113,7 @@ export const Signup: FC = () => {
         />
         {errors.username && (
           <ThemedText
+            testID="username-error"
             size="text14"
             fontWeight="medium"
             isDanger={true}
@@ -125,6 +128,7 @@ export const Signup: FC = () => {
           name="password"
           render={({field: {onChange, value}}) => (
             <ThemedTextInput
+              testID="password-input"
               placeholder={t('password')}
               secureTextEntry
               value={value}

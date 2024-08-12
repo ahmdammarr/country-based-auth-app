@@ -49,15 +49,9 @@ describe('Change Language ', () => {
         </AuthStack.Navigator>
       </NavigationContainer>,
     );
-    fireEvent.changeText(
-      screen.getByPlaceholderText('Email'),
-      'test@example.com',
-    );
-    fireEvent.changeText(screen.getByPlaceholderText('Username'), 'testuser');
-    fireEvent.changeText(
-      screen.getByPlaceholderText('Password'),
-      'password123',
-    );
+    fireEvent.changeText(screen.getByTestId('email-input'), 'test@example.com');
+    fireEvent.changeText(screen.getByTestId('username-input'), 'testuser');
+    fireEvent.changeText(screen.getByTestId('password-input'), 'password123');
     fireEvent.press(screen.getByTestId('signup-button'));
     await waitFor(() => {
       expect(Post).toHaveBeenCalledWith(ENDPOINTS.SIGNUP, {
