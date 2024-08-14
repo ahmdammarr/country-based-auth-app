@@ -3,12 +3,10 @@ import {initReactI18next} from 'react-i18next';
 import {NativeModules, Platform} from 'react-native';
 import * as RNLocalize from 'react-native-localize';
 
-// Import translation files
 import en from '@/locales/en.json';
 import ar from '@/locales/ar.json';
 import hi from '@/locales/hi.json';
 
-// Function to get device language
 const getDeviceLanguage = () => {
   const locale =
     Platform.OS === 'ios'
@@ -21,7 +19,6 @@ const getDeviceLanguage = () => {
     : RNLocalize.getLocales()[0].languageTag;
 };
 
-// i18next configuration
 i18n.use(initReactI18next).init({
   compatibilityJSON: 'v3',
   lng: getDeviceLanguage(),
