@@ -158,13 +158,13 @@ export const Signup: FC = () => {
         />
         <ThemedButton
           style={styles.button}
-          testID="login-button"
+          testID={testIds.auth.loginButton}
           text={t('login')}
           onPress={() => navigate(AuthRoutes.LOGIN, {country})}
         />
         <ThemedButton
           style={styles.button}
-          testID="settings-button"
+          testID={testIds.auth.settingsButton}
           text={t('settings')}
           onPress={() => navigate(AuthRoutes.SETTINGS)}
         />
