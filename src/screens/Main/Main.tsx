@@ -12,7 +12,6 @@ import {ENDPOINTS} from '@/service/enpoints';
 import {Errors} from '@/types/error.type';
 import {UserDetails} from '@/types/user.type';
 
-import {} from '@react-navigation/native';
 import {AppRoutes, AppStackParamList} from '@/navigators/Navigation.types';
 
 import {ThemedButton} from '@/components/Button';
