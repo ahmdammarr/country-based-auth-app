@@ -5,7 +5,7 @@ import {getCountry} from 'react-native-localize';
 import {countriesCodes} from '@/constants/countries';
 import {StoreKeys} from '@/constants/storeKeys';
 import {resetCredentials} from '@/config/secureStore';
-import RNRestart from 'react-native-restart'; // Import package from node modules
+import RNRestart from 'react-native-restart';
 
 type ICountryContext = {
   country: ThemesT;
