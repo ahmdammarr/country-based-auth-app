@@ -4,6 +4,7 @@ export const testIds = {
   },
   auth: {
     signUpTitle: 'signup',
+    loginTitle: 'login',
     emailInput: 'email-input',
     emailError: 'email-error',
     usernameInput: 'username-input',

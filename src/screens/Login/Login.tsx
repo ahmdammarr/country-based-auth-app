@@ -25,6 +25,7 @@ import {
 import {AuthRoutes, AuthStackParamList} from '@/navigators/Navigation.types';
 import {triggerNotification} from '@/config/notifications';
 import {useAuth} from '@/hooks/useAuth';
+import {testIds} from '@/constants/testIds';
 
 interface ILoginForm {
   email: string;
@@ -70,6 +71,7 @@ export const Login: FC = () => {
   return (
     <View style={styles.container}>
       <ThemedText
+        testID={testIds.auth.loginTitle}
         size="text26"
         fontWeight="medium"
         isDanger={true}
@@ -81,6 +83,7 @@ export const Login: FC = () => {
           name="email"
           render={({field: {onChange, value}}) => (
             <ThemedTextInput
+              testID={testIds.auth.emailInput}
               placeholder={t('email')}
               value={value}
               onChangeText={onChange}
@@ -91,6 +94,7 @@ export const Login: FC = () => {
 
         {errors.email && (
           <ThemedText
+            testID={testIds.auth.emailError}
             size="text14"
             fontWeight="medium"
             isDanger={true}
@@ -105,6 +109,7 @@ export const Login: FC = () => {
           name="password"
           render={({field: {onChange, value}}) => (
             <ThemedTextInput
+              testID={testIds.auth.passwordInput}
               placeholder={t('password')}
               secureTextEntry
               value={value}
@@ -114,6 +119,7 @@ export const Login: FC = () => {
         />
         {errors.password && (
           <ThemedText
+            testID={testIds.auth.passwordError}
             size="text14"
             fontWeight="medium"
             isDanger={true}
@@ -123,11 +129,13 @@ export const Login: FC = () => {
         )}
 
         <ThemedButton
+          testID={testIds.auth.loginButton}
           style={styles.button}
           text={t('login')}
           onPress={handleSubmit(onSubmit)}
         />
         <ThemedButton
+          testID={testIds.auth.settingsButton}
           style={styles.button}
           text={t('signup')}
           onPress={() => navigate(AuthRoutes.SIGNUP, {country})}
