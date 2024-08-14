@@ -22,6 +22,7 @@ import {
   useRoute,
 } from '@react-navigation/native';
 import {Errors} from '@/types/error.type';
+import {testIds} from '@/constants/testIds';
 
 interface ISignupForm {
   email: string;
@@ -37,6 +38,7 @@ export const Signup: FC = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [apiError, setAapiError] = useState<Errors>();
   const {t} = useTranslation();
+
   const {
     control,
     handleSubmit,
@@ -67,7 +69,7 @@ export const Signup: FC = () => {
   return (
     <View style={styles.container}>
       <ThemedText
-        testID="Signup"
+        testID={testIds.auth.signUpTitle}
         size="text26"
         fontWeight="medium"
         isDanger={true}
@@ -79,7 +81,7 @@ export const Signup: FC = () => {
           name="email"
           render={({field: {onChange, value}}) => (
             <ThemedTextInput
-              testID="email-input"
+              testID={testIds.auth.emailInput}
               placeholder={t('email')}
               value={value}
               onChangeText={onChange}
@@ -91,6 +93,7 @@ export const Signup: FC = () => {
         {errors.email && (
           <ThemedText
             size="text14"
+            testID={testIds.auth.emailError}
             fontWeight="medium"
             isDanger={true}
             children={errors.email?.message}
@@ -104,7 +107,7 @@ export const Signup: FC = () => {
           name="username"
           render={({field: {onChange, value}}) => (
             <ThemedTextInput
-              testID="username-input"
+              testID={testIds.auth.usernameInput}
               placeholder={t('username')}
               value={value}
               onChangeText={onChange}
@@ -113,7 +116,7 @@ export const Signup: FC = () => {
         />
         {errors.username && (
           <ThemedText
-            testID="username-error"
+            testID={testIds.auth.usernmaeError}
             size="text14"
             fontWeight="medium"
             isDanger={true}
@@ -128,7 +131,7 @@ export const Signup: FC = () => {
           name="password"
           render={({field: {onChange, value}}) => (
             <ThemedTextInput
-              testID="password-input"
+              testID={testIds.auth.passwordInput}
               placeholder={t('password')}
               secureTextEntry
               value={value}
@@ -138,6 +141,7 @@ export const Signup: FC = () => {
         />
         {errors.password && (
           <ThemedText
+            testID={testIds.auth.passwordError}
             size="text14"
             fontWeight="medium"
             isDanger={true}
@@ -147,7 +151,7 @@ export const Signup: FC = () => {
         )}
 
         <ThemedButton
-          testID="signup-button"
+          testID={testIds.auth.signupButton}
           style={styles.button}
           text={t('signup')}
           onPress={handleSubmit(onSubmit)}
@@ -160,7 +164,7 @@ export const Signup: FC = () => {
         />
         <ThemedButton
           style={styles.button}
-          testID="login-button"
+          testID="settings-button"
           text={t('settings')}
           onPress={() => navigate(AuthRoutes.SETTINGS)}
         />
