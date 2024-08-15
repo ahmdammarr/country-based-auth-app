@@ -1,7 +1,14 @@
 
 # Country based Auth App
 
-This the a mobile app for country based auth validation and themeing,
+This the a mobile app for country-based auth validation and theming,
+
+## Over View
+Here is a basic idea of how the architecture of the app looks like 
+We have a country navigation container that opens a screen with a country param this param will be passed
+to a validation selector a apply the respective validation
+<img width="671" alt="image" src="https://github.com/user-attachments/assets/f58d993c-0b4a-4e33-8e08-8e0e3be4602b">
+
 
 ### Features:
 1.  Auth
